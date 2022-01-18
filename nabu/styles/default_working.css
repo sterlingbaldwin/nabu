@@ -34,7 +34,7 @@
 @top-right { content: none }
 }
 @page :first {
-background: url(stories/stormy_night/story-cover.jpg) no-repeat center;
+background: url(./stories/stormy_night/story-cover.jpg) no-repeat center;
 background-size: cover;
 margin: 0;
 }

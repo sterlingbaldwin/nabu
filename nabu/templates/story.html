@@ -8,8 +8,6 @@
       <h1>{{ title }}</h1>
       <address>
         {{ author_name }}
-      </address>
-      <address>
         {{ author_contact }}
       </address>
     </article>
@@ -32,7 +30,9 @@
                   <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
                 {% endfor %}
               </ul>
-            {% elif (pages.name != "end") %}
+            {% endif %}
+            {% if pages.name == "end" %}
+            {% else %}
               <li class="active"><a href="#end">this is the end</a></li>
             {% endif %}
           </article>
