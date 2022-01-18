@@ -4,6 +4,16 @@
   </head>
 
   <body>
+    <article id="cover">
+      <h1>{{ title }}</h1>
+      <address>
+        {{ author_name }}
+      </address>
+      <address>
+        {{ author_contact }}
+      </address>
+    </article>
+    
     {% for page in pages %}
         {% if page.type == "two_column" %}
           <article id="{{ page.name }}" class="columns">
@@ -14,11 +24,16 @@
                 </p>
               {% endfor %}
             </section>
-            <ul>
-              {% for choice in page.choices %}
-                <li class="active"><a href="#{{ choice.target }}">{{choice.description}}</a></li>
-              {% endfor %}
-            </ul>
+            <br><br>
+            {% if page.choices %}
+              <ul>
+                {% for choice in page.choices %}
+                  <li class="active"><a href="#{{ choice.target }}">{{choice.description}}</a></li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <li class="active"><a href="#end">this is the end, or is it?</a></li>
+            {% endif %}
           </article>
         {% endif %}  
     {% endfor %}

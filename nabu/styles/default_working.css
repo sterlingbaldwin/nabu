@@ -116,30 +116,31 @@ height: .08cm;
 margin-bottom: .25cm;
 width: 2cm;
 }
-#contents ul {
+
+.columns ul {
 list-style: none;
 padding-left: 0;
 }
-#contents ul li {
+.columns ul li {
 border-top: .25pt solid #c1c1c1;
 margin: .25cm 0;
 padding-top: .25cm;
 }
-#contents ul li::before {
+.columns ul li::before {
 color: #fbc847;
 content: '• ';
 font-size: 40pt;
 line-height: 16pt;
 vertical-align: bottom;
 }
-#contents ul li a {
+.columns ul li a {
 color: inherit;
 text-decoration-line: inherit;
 }
-#contents ul li a::before {
+.columns ul li a::before {
 content: target-text(attr(href));
 }
-#contents ul li a::after {
+.columns ul li a::after {
 color: #fbc847;
 content: target-counter(attr(href), page);
 float: right;
@@ -153,9 +154,6 @@ padding-top: 1cm;
 }
 .columns section p {
 text-align: justify;
-}
-.columns section p:first-of-type {
-font-weight: 700;
 }
 
 #skills h3 {
