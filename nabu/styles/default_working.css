@@ -34,7 +34,7 @@
 @top-right { content: none }
 }
 @page :first {
-background: url(story-cover.jpg) no-repeat center;
+background: url(stories/stormy_night/story-cover.jpg) no-repeat center;
 background-size: cover;
 margin: 0;
 }
@@ -94,28 +94,6 @@ white-space: pre-wrap;
 #cover address:first-of-type {
 padding-left: 3cm;
 }
-#contents {
-break-before: right;
-break-after: left;
-page: no-chapter;
-}
-#contents h2 {
-font-size: 20pt;
-font-weight: 400;
-margin-bottom: 3cm;
-}
-#contents h3 {
-font-weight: 500;
-margin: 3em 0 1em;
-}
-#contents h3::before {
-background: #fbc847;
-content: '';
-display: block;
-height: .08cm;
-margin-bottom: .25cm;
-width: 2cm;
-}
 
 .columns ul {
 list-style: none;
@@ -137,12 +115,12 @@ vertical-align: bottom;
 color: inherit;
 text-decoration-line: inherit;
 }
-.columns ul li a::before {
+/* .columns ul li a::before {
 content: target-text(attr(href));
-}
+} */
 .columns ul li a::after {
 color: #fbc847;
-content: target-counter(attr(href), page);
+/* content: target-counter(attr(href), page); */
 float: right;
 }
 
