@@ -1,7 +1,7 @@
 import yaml
 from pathlib import Path
 from jinja2 import Template
-from weasyprint import HTML, CSS
+from weasyprint import HTML
 # from xhtml2pdf import pisa
 
 class Story():
@@ -27,20 +27,20 @@ class Story():
             author_contact=story_data["author_contact"],
             pages=story_data["pages"])
         
-        style_string = self.get_style()
+        # style_string = self.get_style()
         h = HTML(string=story_html)
-        h.write_pdf(outpath, stylesheets=[CSS(string=style_string)])
+        h.write_pdf(outpath, stylesheets=[Path("nabu", "styles", "default_working.css")])
         # with open(outpath, 'w+b') as outstream:
         #     pisa.CreatePDF(
         #         story_html,
         #         dest=outstream)
         
-        with open(str(outpath).replace('pdf', 'html'), 'w') as outstream:
-            outstream.write(story_html)
+        # with open(str(outpath).replace('pdf', 'html'), 'w') as outstream:
+        #     outstream.write(story_html)
     
-    def get_style(self):
-        with open(Path("nabu", "styles", f"default_working.css")) as fp:
-            return fp.read()
+    # def get_style(self):
+    #     with open(Path("nabu", "styles", f"default_working.css")) as fp:
+    #         return fp.read()
 
 
     

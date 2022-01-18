@@ -8,18 +8,9 @@
       <h1>
         <a href="#start">{{ title }}</a>
       </h1>
-      {# <address>
+      <address>
         {{ author_name }}
         {{ author_contact }}
-      </address> #}
-      <address>
-        WeasyPrint
-        26 rue Emile Decorps
-        69100 Villeurbanne France
-      </address>
-      <address>
-        contact@courtbouillon.org
-        https://courtbouillon.org
       </address>
     </article>
     
@@ -44,7 +35,9 @@
             {% else %}
               {% if pages.name == "end" %}
               {% else %}
-                <li class="active"><a href="#end">this is the end</a></li>
+                <ul>
+                  <li class="active"><a href="#end">this is the end</a></li>
+                </ul>
               {% endif %}
             {% endif %}
           </article>
