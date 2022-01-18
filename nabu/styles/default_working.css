@@ -145,15 +145,16 @@ content: target-counter(attr(href), page);
 float: right;
 }
 
-#columns section {
+.columns section {
+page-break-before: always;
 columns: 2;
 column-gap: 1cm;
 padding-top: 1cm;
 }
-#columns section p {
+.columns section p {
 text-align: justify;
 }
-#columns section p:first-of-type {
+.columns section p:first-of-type {
 font-weight: 700;
 }
 

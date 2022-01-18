@@ -27,7 +27,7 @@ class Story():
             author_contact=story_data["author_contact"],
             pages=story_data["pages"])
         
-        style_string = self.get_style("default_working")
+        style_string = self.get_style()
         h = HTML(string=story_html)
         h.write_pdf(outpath, stylesheets=[CSS(string=style_string)])
         # with open(outpath, 'w+b') as outstream:
@@ -38,8 +38,8 @@ class Story():
         with open(str(outpath).replace('pdf', 'html'), 'w') as outstream:
             outstream.write(story_html)
     
-    def get_style(self, style="default"):
-        with open(Path("nabu", "styles", f"{style}.css")) as fp:
+    def get_style(self):
+        with open(Path("nabu", "styles", f"default_working.css")) as fp:
             return fp.read()
 
 
