@@ -1,0 +1,16 @@
+cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1636046174303/work
+cssselect2==0.2.1
+fonttools @ file:///Users/runner/miniforge3/conda-bld/fonttools_1639926336485/work
+html5lib @ file:///home/conda/feedstock_root/build_artifacts/html5lib_1592930327044/work
+Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1636510082894/work
+MarkupSafe @ file:///Users/runner/miniforge3/conda-bld/markupsafe_1635833685495/work
+munkres==1.1.4
+olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
+Pillow @ file:///Users/runner/miniforge3/conda-bld/pillow_1636559107609/work
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
+pydyf @ file:///home/conda/feedstock_root/build_artifacts/pydyf_1635608113915/work
+pyphen @ file:///home/conda/feedstock_root/build_artifacts/pyphen_1640641668581/work
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+tinycss2 @ file:///home/conda/feedstock_root/build_artifacts/tinycss2_1637612658783/work
+weasyprint @ file:///home/conda/feedstock_root/build_artifacts/weasyprint_1641664531117/work/weasyprint-54.0-py3-none-any.whl
+webencodings==0.5.1
