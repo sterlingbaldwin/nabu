@@ -147,7 +147,6 @@ float: right;
 }
 
 .columns section {
-page-break-before: always;
 columns: 2;
 column-gap: 1cm;
 padding-top: 1cm;
