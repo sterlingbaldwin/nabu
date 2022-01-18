@@ -3,7 +3,8 @@ title: A Dark and Stormy Night
 author_name: Sterling Baldwin
 author_contact: https://github.com/sterlingbaldwin
 pages:
-  start:
+  - 
+    name: start
     type: two_column
     contents: 
       - 
@@ -19,18 +20,30 @@ pages:
     choices: 
       - 
         description: Climb into the boat and row into the waves
-        target: row the boat
+        target: row_the_boat
       -
         description: Walk along the path, keeping a good distance from those thorns
-        target: walk the bramble path
+        target: walk_the_bramble_path
 
-  row the boat:
-    contents: "Taking the oars in hand, I push off from shore and head out into the dark water"
+  - 
+    name: row_the_boat
+    type: two_column
+    contents: 
+      - 
+        "Taking the oars in hand, I push off from shore and head out into the dark water"
     
-  walk the bramble path:
-    contents: "turning away from the water, start along the bramble path. Sharp thorns seem to line every one of the
+  -
+    name: walk_the_bramble_path
+    type: two_column
+    contents: 
+      - 
+        "turning away from the water, start along the bramble path. Sharp thorns seem to line every one of the
       endless writhing vines, forming an impenetrable wall along one side of the path. Soon the brambles tower over head,
       interweaving above me and blocking the thin light of the moon, plunging my into darkness"
 
-  end:
-    contents: "FIN"
+  -
+    name: end
+    type: two_column
+    contents: 
+      - 
+        "FIN"

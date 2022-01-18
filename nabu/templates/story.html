@@ -1,28 +1,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="nabu/styles/style.css" rel="stylesheet">
-    <title>{{title}}</title>
   </head>
 
   <body>
-    {% for page_name, page_info in pages.items() %}
-        <article id="{{ page_name }}">
-          {% if page.type ==  two_column %}
+    {% for page in pages %}
+        {% if page.type == "two_column" %}
+          <article id="{{ page.name }}" class="columns">
             <section>
-              {% for item in page_info.contents %}
+              {% for item in page.contents %}
                 <p>
                   {{ item }}
                 </p>
               {% endfor %}
             </section>
             <ul>
-              {% for item in page_info.choices %}
-                <li class="active"><a href="#{{ item.target }}">{{item.description}}</a></li>
+              {% for choice in page.choices %}
+                <li class="active"><a href="#{{ choice.target }}">{{choice.description}}</a></li>
               {% endfor %}
             </ul>
-          {% endif %}  
-        </article>
+          </article>
+        {% endif %}  
     {% endfor %}
   </body>
 </html>

@@ -2,12 +2,13 @@ import os
 import sys
 import argparse
 from pathlib import Path
-from story import Story
+from nabu.story import Story
 
 
 def main():
 
     default_lib_path = Path(os.environ['PWD'], 'stories')
+    default_template_path = Path(os.environ['PWD'], 'nabu', 'templates', 'story.html')
     default_story = "stormy_night"
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -24,6 +25,8 @@ def main():
     args = parser.parse_args()
     lib_path = Path(args.library)
     story_path = Path(lib_path, args.story)
+    if not args.output:
+        output = Path(default_lib_path, f"{args.story}.pdf")
     if not story_path.exists():
         print("The requested story does not exist")
         return -1
@@ -34,11 +37,14 @@ def main():
         print("The story doesnt have its contents defined")
         return -1
     
-    story = Story(story_path)
-    story.render(args.story, args.output)
+    print("done parsing args")
+    
+    story = Story(story_path, args.story, default_template_path)
+    story.render(output)
 
     return 0
 
 
 if __name__ == "__main__":
+    
     sys.exit(main())
