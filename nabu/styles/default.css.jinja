@@ -40,13 +40,17 @@ p {
 }
 
 img {
-  display: block;
   max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 a {
   color: inherit;
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-decoration-line: inherit;
 }
 
@@ -125,19 +129,14 @@ aside img {
 ul {
   list-style: none;
   padding-left: 0;
+  margin-top: 2em;
 }
-ul::after {
-  border-bottom: .25pt solid #c1c1c1;
-}
+
 ul li {
   border-top: .25pt solid #c1c1c1;
   margin: .25cm 0;
   padding-top: .25cm;
   text-align: center;
-}
-
-ul li::before {
-  margin-top: 1em;
 }
 
 ul li a {
