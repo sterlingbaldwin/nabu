@@ -21,12 +21,12 @@ def main():
         help=f"The name of the story you would like to render, the default is the sample story 'stormy_night'")
     parser.add_argument(
         '-o', '--output',
-        help=f"The path to where the output should be saved, default is {default_lib_path}/<STORY_NAME>.pdf")
+        help=f"The path to where the output should be saved, default is {default_lib_path}/{default_story}/<STORY_NAME>.pdf")
     args = parser.parse_args()
     lib_path = Path(args.library)
     story_path = Path(lib_path, args.story)
     if not args.output:
-        output = Path(default_lib_path, f"{args.story}.pdf")
+        output = Path(default_lib_path, default_story, f"{args.story}.pdf")
     if not story_path.exists():
         print("The requested story does not exist")
         return -1
