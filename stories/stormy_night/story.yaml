@@ -18,9 +18,6 @@ chapters:
             "It was a dark and stormy night, the the waves beat themselves across the beach
           and the wind lashed my hair across my face. I could taste bitter salt dropplets from the ocean
           with a thousand microscopic sea creatures in my mouth."
-          - 
-            "The sand of the beach crunches under my feet and I feel the soft give of the surface decorming under
-            my shoes as I walk down towards the water, drawn by the sound of the waves towards the crashing surf."
           -
             "Before me was a boat, not much more then a dingy, bouncing about in the rough water. To my right 
           was a path leading into the dunes, beset on one side by a wall of thorny brambles."
@@ -36,6 +33,9 @@ chapters:
         name: row_the_boat
         image: boat_and_sharks.jpg
         contents: 
+          - 
+            "The sand of the beach crunches under my feet and I feel the soft give of the surface decorming under
+            my shoes as I walk down towards the water, drawn by the sound of the waves towards the crashing surf."
           - 
             "Taking the oars in hand, I push off from shore and head out into the dark water"
         
