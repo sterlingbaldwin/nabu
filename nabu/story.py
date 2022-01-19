@@ -22,6 +22,8 @@ class Story():
 
         # replace the image paths with the full path
         for chapter in story_data['chapters']:
+            if 'image' in chapter:
+                chapter['image'] = Path(self.story_path, chapter['image'])
             for page in chapter['pages']:
                 if 'image' in page:
                     page['image'] = Path(self.story_path, page['image'])

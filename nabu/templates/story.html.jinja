@@ -30,8 +30,7 @@
         {% endif %}
 
         {% for page in chapter.pages %}
-          <p style="page-break-before: always;"></p>
-          <p id="{{ page.name }}">
+          <p id="{{ page.name }}" style="page-break-before: always;">
             <section>
               {% for item in page.contents %}
                 <p>
@@ -39,7 +38,6 @@
                 </p>
               {% endfor %}
             </section>
-            <br><br>
             {% if page.choices|length > 1 %}
               <ul>
                 {% for choice in page.choices %}
