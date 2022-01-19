@@ -24,8 +24,8 @@ class Story():
         for chapter in story_data['chapters']:
             if 'image' in chapter:
                 chapter['image'] = Path(self.story_path, chapter['image'])
-            if 'min_image' in chapter:
-                chapter['image'] = Path(self.story_path, chapter['min_image'])
+            if 'mini_image' in chapter:
+                chapter['image'] = Path(self.story_path, chapter['mini_image'])
             for page in chapter['pages']:
                 if 'image' in page:
                     page['image'] = Path(self.story_path, page['image'])
