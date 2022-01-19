@@ -41,7 +41,6 @@ p {
 
 img {
   display: block;
-  margin: 2em auto;
   max-width: 70%;
 }
 
@@ -127,12 +126,20 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+ul::after {
+  border-bottom: .25pt solid #c1c1c1;
+}
 ul li {
   border-top: .25pt solid #c1c1c1;
   margin: .25cm 0;
   padding-top: .25cm;
   text-align: center;
 }
+
+ul li::before {
+  margin-top: 1em;
+}
+
 ul li a {
   color: inherit;
   text-decoration-line: inherit;
