@@ -20,12 +20,12 @@
     {% for chapter in chapters %}
     <section id="{{ chapter.id }}" class="chapter">
       <h2 id="{{ chapter.id }}-h2">{{ chapter.name }}</h2>
-      {% if 'mini-image' in chapter %}
-        <aside>
-          <figure>
-            <img src="file://{{ chapter.mini_image }}"/>
-          </figure>
-        </aside>
+      {% if 'mini_image' in chapter %}
+      <aside>
+        <figure>
+          <img src="file://{{ chapter.mini_image }}"/>
+        </figure>
+      </aside>
       {% endif %}
 
       {% for page in chapter.pages %}
@@ -41,20 +41,20 @@
       {% if page.choices|length > 1 %}
         <ul>
           {% for choice in page.choices %}
-            <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
+          <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
           {% endfor %}
         </ul>
       {% else %}
         {% if 'end' not in chapter %}
-          <ul>
-            <li class="active"><a href="#start">back to the start</a></li>
-          </ul>
+        <ul>
+          <li class="active"><a href="#start">back to the start</a></li>
+        </ul>
         {% endif %}
       {% endif %}
       </section>
       
       {% if 'image' in page %}
-        <img class="outro" src="file://{{ page.image }}"/>
+      <img class="outro" src="file://{{ page.image }}"/>
       {% endif %}
       {% endfor %}
     </section>
