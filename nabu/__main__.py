@@ -8,7 +8,7 @@ from nabu.story import Story
 def main():
 
     default_lib_path = Path(os.environ['PWD'], 'stories')
-    default_template_path = Path(os.environ['PWD'], 'nabu', 'templates', 'story.html')
+    default_template_path = Path(os.environ['PWD'], 'nabu', 'templates', 'story.jinja')
     default_story = "stormy_night"
     parser = argparse.ArgumentParser()
     parser.add_argument(
