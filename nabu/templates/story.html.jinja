@@ -30,9 +30,9 @@
 
       {% for page in chapter.pages %}
       {% if loop.index0 != 0 %}
-      <p id="{{ page.name }}" style="page-break-before: always;"></p>
+      <p style="page-break-before: always;"></p>
       {% endif %}
-      <section>
+      <section id="{{ page.name }}">
         {% for item in page.contents %}
         <p>
           {{ item }}
