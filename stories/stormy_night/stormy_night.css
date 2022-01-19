@@ -128,7 +128,7 @@ aside img {
   border-radius: 0 0 50% 50% / 0 0 15mm 15mm;
   content: "";
   display: block;
-  height: 90mm;
+  height: 70mm;
   left: -30mm;
   position: absolute;
   top: -20mm;
@@ -178,6 +178,3 @@ ul li a {
 
 
 
-
-
-/* TODO: add support for rendering background images */
