@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <section class="fullpage">
+      <a href="#start">
+        <h1>{{ title }}</h1>
+      </a>
+      <img src="{{ cover_image }}" />
+    </section>
+    <section id="authors">
+      <p>
+        {{ author_name }}
+        {{ author_contact }}
+      </p>
+    </section>
+    
+    {% for chapter in chapters %}
+      <section id="{{ chapter.id }}" class="chapter">
+        <h2 id="{{ chapter.id }}-h2">{{ chapter.name }}</h2>
+        {% if 'mini-image' in chapter %}
+          <aside>
+            <figure>
+              <img src="img/poire.png"/>
+              <figcaption>Poire</figcaption>
+            </figure>
+          </aside>
+        {% endif %}
+
+        {% for page in chapter.pages %}
+          <p style="page-break-before: always;"></p>
+          <p id="{{ page.name }}">
+            <section>
+              {% for item in page.contents %}
+                <p>
+                  {{ item }}
+                </p>
+              {% endfor %}
+            </section>
+            <br><br>
+            {% if page.choices|length > 1 %}
+              <ul>
+                {% for choice in page.choices %}
+                  <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              {% if 'end' not in chapter %}
+                <ul>
+                  <li class="active"><a href="#end">this is the end</a></li>
+                </ul>
+              {% endif %}
+            {% endif %}
+          </p>
+          {% if 'image' in page %}
+            <img class="outro" src="{{ page.image }}"/>
+          {% endif %}
+        {% endfor %}
+      </section>
+    {% endfor %}
+  </body>
+</html>
