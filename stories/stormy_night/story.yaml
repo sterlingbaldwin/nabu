@@ -9,7 +9,7 @@ chapters:
     name: Chapter One
     id: chapter_1
     image: stormy_night.jpg
-    mini-image: pirate_portrait.png
+    mini_image: pirate_portrait.png
     pages:
       -
         name: start
