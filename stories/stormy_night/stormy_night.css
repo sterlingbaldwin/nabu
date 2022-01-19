@@ -26,20 +26,8 @@
   }
 }
 
-@page clean {
-  @bottom-right {
-    content: none;
-  }
-
-  @bottom-left {
-    content: none;
-  }
-}
-
 html {
-  counter-reset: h2-counter;
-  font-family: OpenDyslexic;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 body {
@@ -57,16 +45,10 @@ img {
   max-width: 70%;
 }
 
-h1 {
-  display: none;
-}
-
 h2 {
-  color: white;
-  counter-increment: h2-counter;
+  color: black;
   display: flex;
   flex-direction: column;
-  font-family: OpenDyslexic;
   font-size: 3em;
   height: 6cm;
   justify-content: flex-end;
@@ -107,7 +89,6 @@ aside img {
 
 #authors {
   padding-top: 10em;
-  page: clean;
   text-align: center;
 }
 
