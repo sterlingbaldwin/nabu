@@ -171,11 +171,11 @@ ul li a {
 }
 
 {% for chapter in chapters %}
-  {% if 'image' in chapter %}
-    #{{ chapter.id }}::before {
-      background-image: url("file://{{ chapter.image }}");
-    }
-  {% endif %}
+{% if 'image' in chapter %}
+#{{ chapter.id }}::before {
+  background-image: url("file://{{ chapter.image }}");
+}
+{% endif %}
 {% endfor %}
 
 /* TODO: add support for rendering background images */

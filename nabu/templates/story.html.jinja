@@ -18,44 +18,46 @@
     </section>
     
     {% for chapter in chapters %}
-      <section id="{{ chapter.id }}" class="chapter">
-        <h2 id="{{ chapter.id }}-h2">{{ chapter.name }}</h2>
-        {% if 'mini-image' in chapter %}
-          <aside>
-            <figure>
-              <img src="file://{{ chapter.mini_image }}"/>
-            </figure>
-          </aside>
-        {% endif %}
+    <section id="{{ chapter.id }}" class="chapter">
+      <h2 id="{{ chapter.id }}-h2">{{ chapter.name }}</h2>
+      {% if 'mini-image' in chapter %}
+        <aside>
+          <figure>
+            <img src="file://{{ chapter.mini_image }}"/>
+          </figure>
+        </aside>
+      {% endif %}
 
-        {% for page in chapter.pages %}
-          <p id="{{ page.name }}" style="page-break-before: always;">
-            <section>
-              {% for item in page.contents %}
-                <p>
-                  {{ item }}
-                </p>
-              {% endfor %}
-            </section>
-            {% if page.choices|length > 1 %}
-              <ul>
-                {% for choice in page.choices %}
-                  <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
-                {% endfor %}
-              </ul>
-            {% else %}
-              {% if 'end' not in chapter %}
-                <ul>
-                  <li class="active"><a href="#end">this is the end</a></li>
-                </ul>
-              {% endif %}
-            {% endif %}
-          </p>
-          {% if 'image' in page %}
-            <img class="outro" src="file://{{ page.image }}"/>
-          {% endif %}
+      {% for page in chapter.pages %}
+      {% if loop.index0 != 0 %}
+      <p id="{{ page.name }}" style="page-break-before: always;"></p>
+      {% endif %}
+      <section>
+        {% for item in page.contents %}
+        <p>
+          {{ item }}
+        </p>
         {% endfor %}
+      {% if page.choices|length > 1 %}
+        <ul>
+          {% for choice in page.choices %}
+            <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        {% if 'end' not in chapter %}
+          <ul>
+            <li class="active"><a href="#start">back to the start</a></li>
+          </ul>
+        {% endif %}
+      {% endif %}
       </section>
+      
+      {% if 'image' in page %}
+        <img class="outro" src="file://{{ page.image }}"/>
+      {% endif %}
+      {% endfor %}
+    </section>
     {% endfor %}
   </body>
 </html>
