@@ -37,8 +37,6 @@ def main():
         print("The story doesnt have its contents defined")
         return -1
     
-    print("done parsing args")
-    
     story = Story(story_path, args.story, default_template_path)
     story.render(output)
 

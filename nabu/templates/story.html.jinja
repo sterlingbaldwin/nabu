@@ -8,7 +8,7 @@
       <a href="#start">
         <h1>{{ title }}</h1>
       </a>
-      <img src="{{ cover_image }}" />
+      <img src="file://{{ cover_image }}" />
     </section>
     <section id="authors">
       <p>
@@ -23,7 +23,7 @@
         {% if 'mini-image' in chapter %}
           <aside>
             <figure>
-              <img src="file://{{ chapter.mini-image }}"/>
+              <img src="file://{{ chapter.mini_image }}"/>
             </figure>
           </aside>
         {% endif %}
@@ -52,7 +52,7 @@
             {% endif %}
           </p>
           {% if 'image' in page %}
-            <img class="outro" src="file://{{ static page.image }}"/>
+            <img class="outro" src="file://{{ page.image }}"/>
           {% endif %}
         {% endfor %}
       </section>
