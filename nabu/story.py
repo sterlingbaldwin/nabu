@@ -34,7 +34,7 @@ class Story():
             chapters=story_data["chapters"])
         
         # now render the css
-        css_path = Path("nabu", "styles", "default.css")
+        css_path = Path("nabu", "styles", "default.css.jinja")
         with open(css_path, "r") as fp:
             css_template = Template(fp.read())
         
