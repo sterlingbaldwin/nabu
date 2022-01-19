@@ -34,7 +34,7 @@ class Story():
             author_name=story_data["author_name"],
             author_contact=story_data["author_contact"],
             chapters=story_data["chapters"])
-        with open(self.story_path, f"{self.story_name}.html") as fp:
+        with open(Path(self.story_path, f"{self.story_name}.html"), 'w') as fp:
             fp.write(story_html)
         
         # now render the css
@@ -44,7 +44,7 @@ class Story():
         
         story_css = css_template.render(
             chapters=story_data["chapters"])
-        with open(self.story_path, f"{self.story_name}.css") as fp:
+        with open(Path(self.story_path, f"{self.story_name}.css"), 'w') as fp:
             fp.write(story_css)
         
         # finally, write out the pdf
