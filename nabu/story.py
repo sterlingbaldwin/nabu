@@ -21,12 +21,12 @@ class Story():
             story_data = yaml.load(fp, Loader=yaml.SafeLoader)
 
         # replace the image paths with the full path
-        for chapter in story_data['chapters']:
-            if 'image' in chapter:
-                chapter['image'] = Path(self.story_path, chapter['image'])
-            for page in chapter['pages']:
-                if 'image' in page:
-                    page['image'] = Path(self.story_path, page['image'])
+        # for chapter in story_data['chapters']:
+        #     if 'image' in chapter:
+        #         chapter['image'] = Path(self.story_path, chapter['image'])
+        #     for page in chapter['pages']:
+        #         if 'image' in page:
+        #             page['image'] = Path(self.story_path, page['image'])
 
         story_html = story_template.render(
             cover_image=Path(self.story_path, story_data["cover_image"]),
@@ -34,6 +34,8 @@ class Story():
             author_name=story_data["author_name"],
             author_contact=story_data["author_contact"],
             chapters=story_data["chapters"])
+        with open(self.story_path, f"{self.story_name}.html") as fp:
+            fp.write(story_html)
         
         # now render the css
         css_path = Path("nabu", "styles", "default.css.jinja")
@@ -42,9 +44,15 @@ class Story():
         
         story_css = css_template.render(
             chapters=story_data["chapters"])
+        with open(self.story_path, f"{self.story_name}.css") as fp:
+            fp.write(story_css)
         
         # finally, write out the pdf
-        h = HTML(string=story_html)
+        h = HTML(
+            string=story_html,
+            base_url=self.story_path)
         c = CSS(string=story_css)
         h.write_pdf(outpath, stylesheets=[c])
+
+
 

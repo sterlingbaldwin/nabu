@@ -1,4 +1,5 @@
 <html>
+{% load static %}
   <head>
     <meta charset="utf-8">
   </head>
@@ -23,8 +24,7 @@
         {% if 'mini-image' in chapter %}
           <aside>
             <figure>
-              <img src="img/poire.png"/>
-              <figcaption>Poire</figcaption>
+              <img src="{% static chapter.mini-image %}"/>
             </figure>
           </aside>
         {% endif %}
@@ -53,7 +53,7 @@
             {% endif %}
           </p>
           {% if 'image' in page %}
-            <img class="outro" src="{{ page.image }}"/>
+            <img class="outro" src="{% static page.image %}"/>
           {% endif %}
         {% endfor %}
       </section>
