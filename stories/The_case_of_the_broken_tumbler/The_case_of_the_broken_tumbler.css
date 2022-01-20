@@ -68,7 +68,7 @@ h2 {
   margin: 0;
   string-set: heading content();
   text-align: center;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #FFFFFF;
 }
 
 h2::before {
