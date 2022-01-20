@@ -62,6 +62,3 @@ The contents of the page can be either a single string, or a list of paragraphs.
 
 Each story should have an "img" directory where images for the story should also be stored.
 
-### NOTE
-
-Annoyingly, and for no reason I've been able to figure out yet, you should always have at least two paragraphs per page, or the top border on the first choice wont appear.

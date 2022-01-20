@@ -35,6 +35,7 @@ chapters:
 
       - 
         name: not_worth_my_time
+        image: bleachers.jpg
         contents: 
           - 
             "Although Alan was in the same marching band as my best friend Macy, I really didn't want to get involved in his drama. It was obvious
@@ -90,7 +91,7 @@ chapters:
         choices: 
           - 
             description: Time to give that notebook a closer look
-            target: find_the_notebook
+            target: read_the_notebook
         
       -
         name: mallet_investigation_time
@@ -102,7 +103,7 @@ chapters:
             ""
 
       -
-        name: find_the_notebook
+        name: read_the_notebook
         image: bleachers.jpg
         contents: 
           - 
