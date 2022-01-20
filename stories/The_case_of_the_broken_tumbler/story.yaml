@@ -17,7 +17,8 @@ chapters:
             "As with most things in my life, I should have known better at the time and kept my nose out of other peoples business, 
             but what can I say, I'm nosy. The whole affair started during the waning hours of my previous greatest investigation, The Case of the Missing Xylophone Mallet."
           -
-            "Alen Greensberg, the best procussioninst in the schools marching band, had come to me almost in tears the previous day. He was working hard to hold back his 
+            "Alan Greenbelt, the best percussionist in the schools marching band, had come to me almost in tears the previous day. He was a nerdy kid, even by band standards, but we'd been on good terms since
+            last year when he helped me find Alicia Fairbanks missing hamster. As he approached I couldn't help noticing he was working hard to hold back 
             panic, but I could tell it was welling up like a dam ready to burst."
           - "\"Sarah, you've got to help me! I've been looking for it everywhere and the homecoming game is this weekend, there's no way I can play without it!\""
           - "He had the most annoying way of starting sentences half way through, like I already knew what he was talking about. \"Hold on Alan, calm down and start from the beginning, what's going on?\""
@@ -26,7 +27,7 @@ chapters:
             I could tell he was starting to get worked up again, so I tried a different tact."
         choices: 
           - 
-            description: This really isnt worth my time, he can find his own damn mallets
+            description: This really isn't worth my time, he can find his own damn mallets
             target: not_worth_my_time
           -
             description: Missing Xylophone mallets just before the big game? Sounds like foul play
@@ -36,9 +37,9 @@ chapters:
         name: not_worth_my_time
         contents: 
           - 
-            "Although Alan was in the same marching band as my best friend Macy, I really didnt want to get involved in his drama. It was obvious
-            to me that someone in the band was trying to pull one over on him, a jealous rival percusionist looking to steal his spot, or perhaps 
-            a spurned girl just trying to get back at him for some percieved slight, but more than anything I knew this wasnt my problem. However,
+            "Although Alan was in the same marching band as my best friend Macy, I really didn't want to get involved in his drama. It was obvious
+            to me that someone in the band was trying to pull one over on him, a jealous rival percussionist looking to steal his spot, or perhaps 
+            a spurned girl just trying to get back at him for some perceived slight, but more than anything I knew this wasn't my problem. However,
             as the best known detective at Lake Wood High, it wouldn't do to have the word going around that I rejected a case. I saw an easy way out
             that would fix both these problems."
           - 
@@ -58,10 +59,37 @@ chapters:
             I had no intention of doing any such thing, since I already knew exactly where I would find what he was looking for. Just then, the first bell rang and the mass of bodies 
             filling the hallways started to disperse into the rooms. Alan looked like he was about to say something, but I waved him off and started walking down towards Mr. Brackwords study hall in room 204."
           -
-            "..."
+            "It was a slog getting through the first few periods, and as soon as the bell rang for lunch I launched myself out the doors to the quad. I knew exactly how long
+            it would take to get through my secret route off campus, and down to the music store downtown. I would have just enough time to grab a new set of mallets, swing 
+            by my favorite coffee spot for a muffin, and sneak back onto campus before the start of my next class."
+          - 
+            "I rounded the corner to the quad just in time to see the crowd assembling for the lunch time cheer squad display I had completely
+            forgotten about. The crowd would make my planned departure route impossible, no way no one would notice me hop the fence behind the science
+            building with all these jocks in attendance. I could see once of the vice principals gearing up to take the stage, and had to back peddle hard
+            before drowning in the excess of palpable school spirit. I'd have to swing around the back of the grand stands, but I could still make
+            it if I hurried."
+          -
+            "I juked to the right, cutting through the current of lunch traffic, nearly running head first into a giant stuffed squirrel coming the other way,
+            the school mascot headed to the rally. By grabbing a handful of fake fur and doing a full spin, I kept my momentum up and launched myself sideways
+            through the human traffic towards the alley leading between the football bleachers and the science building. Unknown to the student body at large
+            there's a padlocked side gate behind the bleachers used only by the maintenance staff when they need to track fertilizer onto the field, well, and you're intreped teenaged private
+            investigator when she's hurry that is. I'd first picked the lock freshman year so Macy and I could sneak into the 4th of July fireworks
+            without paying, and it's been yielding dividends ever since."
+          -
+            "I skidded to a stop in front of the gate, and slipping my tension wrench into the lock started the familiar process of massaging the 
+            tumblers into position. I had popped this lock so many times I could do it by feel at this point, and couldn't help but nervously glance to my
+            left and right as I wiggled the wrench deeper into the locks mechanism. Normally I would only use this route at night, it was a bit brazen even for 
+            me to try and pop an administration padlock in broad daylight, but I was hoping that all the commotion in the quad would draw away any prying eyes. It
+            was as I nervously glanced behind me that I spotted something odd, under the bleachers was what looked like a students notebook. I felt the last tumbler
+            give, and the immensely satisfying pop of the lock springing open, but before I opened the gate and escaped I couldn't help myself and dashed back
+            to grab the notebook for perusal later."
+          -
+            "The rest of the caper when off without a hitch, I grabbed by bicycle from the off campus rack I habitually locked it too (it wouldn't 
+            do to be seen leaving the parking lot) and road at full speed downtown towards the music shop. As I guessed, the 'unique, irreplaceable' mallets
+            Alan was so worked up about were a cheap set of generic mallets. I thanked the clerk behind the counter before racing back to campus."
         choices: 
           - 
-            description: Wait, it looks like someone dropped their notebook
+            description: Time to give that notebook a closer look
             target: find_the_notebook
         
       -
@@ -70,7 +98,8 @@ chapters:
         contents: 
           - 
             ""
-          - ""
+          - 
+            ""
 
       -
         name: find_the_notebook

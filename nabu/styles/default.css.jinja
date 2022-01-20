@@ -49,7 +49,8 @@ img {
 }
 
 h1 a {
-  text-shadow: 2px 2px #000000;
+  font: italic bold 100px Georgia, Serif;
+  text-shadow: -14px 7px 0 white; 
   color: inherit;
   text-align: center;
   display: block;
@@ -66,9 +67,8 @@ h2 {
   height: 6cm;
   justify-content: flex-end;
   margin: 0;
-  string-set: heading content();
   text-align: center;
-  text-shadow: 10px 10px #FFFFFF;
+  text-shadow: 10px 10px white;
 }
 
 h2::before {
@@ -162,10 +162,10 @@ ul li a {
   z-index: -1;
 }
 
-{% for chapter in chapters %}
-{% if 'image' in chapter %}
+{%- for chapter in chapters %}
+{%- if 'image' in chapter %}
 #{{ chapter.id }}::before {
   background-image: url("file://{{ chapter.image }}");
 }
-{% endif %}
-{% endfor %}
+{%- endif %}
+{%- endfor %}

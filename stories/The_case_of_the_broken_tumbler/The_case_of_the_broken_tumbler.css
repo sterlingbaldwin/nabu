@@ -66,9 +66,8 @@ h2 {
   height: 6cm;
   justify-content: flex-end;
   margin: 0;
-  string-set: heading content();
   text-align: center;
-  text-shadow: 10px 10px #FFFFFF;
+  text-shadow: 10px 10px white;
 }
 
 h2::before {
