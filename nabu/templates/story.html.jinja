@@ -42,16 +42,18 @@
           {{ item }}
         </p>
         {%- endfor %}
-      {%- if page.choices|length > 1 %}
+      {%- if 'choices' in page %}
         <ul>
           {%- for choice in page.choices %}
           <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
           {%- endfor %}
+          <li class="active"></li>
         </ul>
       {%- else %}
         {%- if 'end' not in chapter %}
         <ul>
           <li class="active"><a href="#start">back to the start</a></li>
+          <li class="active"></li>
         </ul>
         {%- endif %}
       {%- endif %}
