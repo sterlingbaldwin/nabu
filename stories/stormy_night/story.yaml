@@ -3,7 +3,6 @@ title: A Dark and Stormy Night
 author_name: Sterling Baldwin
 author_contact: https://github.com/sterlingbaldwin
 cover_image: story-cover.jpg
-theme_color: 1525b3
 chapters:
   -
     name: Chapter One
@@ -12,15 +11,15 @@ chapters:
     mini_image: pirate_portrait.png
     pages:
       -
-        name: on the beach
+        name: on_the_beach
         contents: 
           - 
             "It was a dark and stormy night, the the waves beat themselves across the beach
-          and the wind lashed my hair across my face. I could taste bitter salt dropplets from the ocean
-          with a thousand microscopic sea creatures in my mouth."
+            and the wind lashed my hair across my face. I could taste bitter salt dropplets from the ocean
+            with a thousand microscopic sea creatures in my mouth."
           -
             "Before me was a boat, not much more then a dingy, bouncing about in the rough water. To my right 
-          was a path leading into the dunes, beset on one side by a wall of thorny brambles."
+            was a path leading into the dunes, beset on one side by a wall of thorny brambles."
         choices: 
           - 
             description: Climb into the boat and row into the waves
@@ -45,8 +44,8 @@ chapters:
         contents: 
           - 
             "Turning away from the water, start along the bramble path. Sharp thorns seem to line every one of the
-          endless writhing vines, forming an impenetrable wall along one side of the path. Soon the brambles tower over head,
-          interweaving above me and blocking the thin light of the moon, plunging my into darkness"
+            endless writhing vines, forming an impenetrable wall along one side of the path. Soon the brambles tower over head,
+            interweaving above me and blocking the thin light of the moon, plunging me into darkness"
   -
     name: FIN
     end: true
