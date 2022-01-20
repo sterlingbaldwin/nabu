@@ -12,7 +12,7 @@ chapters:
     mini_image: pirate_portrait.png
     pages:
       -
-        name: start
+        name: on the beach
         contents: 
           - 
             "It was a dark and stormy night, the the waves beat themselves across the beach
@@ -56,4 +56,4 @@ chapters:
       name: end
       contents: 
         - 
-          "FIN"
+          ""
