@@ -49,7 +49,7 @@ img {
 }
 
 h1 a {
-  font: italic bold 100px Georgia, Serif;
+  font: italic bold 30px Georgia, Serif;
   text-shadow: -14px 7px 0 white; 
   color: inherit;
   text-align: center;
