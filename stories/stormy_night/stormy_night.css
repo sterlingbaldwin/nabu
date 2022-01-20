@@ -44,6 +44,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10% 10% 10% 10%;
 }
 
 h1 a {
@@ -161,7 +162,7 @@ ul li a {
 
 
 #chapter_1::before {
-  background-image: url("file:///home/users/mschpc/2021/sbaldwin/projects/nabu/stories/stormy_night/stormy_night.jpg");
+  background-image: url("file:///home/users/mschpc/2021/sbaldwin/projects/nabu/stories/stormy_night/img/stormy_night.jpg");
 }
 
 
