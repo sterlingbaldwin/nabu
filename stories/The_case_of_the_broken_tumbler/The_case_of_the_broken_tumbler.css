@@ -49,6 +49,7 @@ img {
 }
 
 h1 a {
+  text-shadow: 2px 2px #000000;
   color: inherit;
   text-align: center;
   display: block;
