@@ -1,39 +1,59 @@
-title:
-  contents: A Dark and Stormy Night
-  author: Sterling Baldwin
-  goto: start
-  sound: waves-soft.wav
 
-start:
-  contents: "It was a dark and stormy night, the the waves beat themselves across the beach
-    and the wind lashed my hair across my face. I could taste bitter salt dropplets from the ocean
-    with a thousand microscopic sea creatures in my mouth."
-  goto: first choice
-  text_speed: fast
-  sound: waves-soft.wav
+title: A Dark and Stormy Night
+author_name: Sterling Baldwin
+author_contact: https://github.com/sterlingbaldwin
+cover_image: story-cover.jpg
+chapters:
+  -
+    name: Chapter One
+    id: chapter_1
+    image: stormy_night.jpg
+    mini_image: pirate_portrait.png
+    pages:
+      -
+        name: on_the_beach
+        contents: 
+          - 
+            "It was a dark and stormy night, the the waves beat themselves across the beach
+            and the wind lashed my hair across my face. I could taste bitter salt dropplets from the ocean
+            with a thousand microscopic sea creatures in my mouth."
+          -
+            "Before me was a boat, not much more then a dingy, bouncing about in the rough water. To my right 
+            was a path leading into the dunes, beset on one side by a wall of thorny brambles."
+        choices: 
+          - 
+            description: Climb into the boat and row into the waves
+            target: row_the_boat
+          -
+            description: Walk along the path, keeping a good distance from those thorns
+            target: walk_the_bramble_path
 
-first choice:
-  contents: "Before me was a boat, not much more then a dingy, bouncing about in the rough water. To my right 
-    was a path leading into the dunes, beset on one side by a wall of thorny brambles."
-  text_speed: fast
-  choices: 
-    - 
-      option: Climb into the boat and row into the waves
-      target: row the boat
+      - 
+        name: row_the_boat
+        image: boat_and_sharks.jpg
+        contents: 
+          - 
+            "The sand of the beach crunches under my feet and I feel the soft give of the surface decorming under
+            my shoes as I walk down towards the water, drawn by the sound of the waves towards the crashing surf."
+          - 
+            "Taking the oars in hand, I push off from shore and head out into the dark water"
+        
+      -
+        name: walk_the_bramble_path
+        image: thorns.jpg
+        contents: 
+          - 
+            "Turning away from the water, start along the bramble path. Sharp thorns seem to line every one of the
+            endless writhing vines, forming an impenetrable wall along one side of the path."
+          - "Soon the brambles tower over head,
+            interweaving above me and blocking the thin light of the moon, plunging me into darkness"
+  -
+    name: FIN
+    end: true
+    id: end
+    pages:
     -
-      option: Walk along the path, keeping a good distance from those thorns
-      target: walk the bramble path
-
-row the boat:
-  contents: "Taking the oars in hand, I push off from shore and head out into the dark water"
-  sound: waves-rough.wav
-  text_speed: slow
-
-walk the bramble path:
-  contents: "turning away from the water, start along the bramble path. Sharp thorns seem to line every one of the
-    endless writhing vines, forming an impenetrable wall along one side of the path. Soon the brambles tower over head,
-    interweaving above me and blocking the thin light of the moon, plunging my into darkness"
-  sound: night-forest.wav
-  text_speed: slow
-
-   
+      name: end
+      contents: 
+        - 
+          ""

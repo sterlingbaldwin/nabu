@@ -1,0 +1,169 @@
+@page {
+  margin: 2cm 2cm 3cm 2cm;
+  size: 148mm 210mm;
+}
+
+@page full {
+  @bottom-right {
+    content: none;
+  }
+
+  @bottom-left {
+    content: none;
+  }
+
+  background: black;
+  margin: 0;
+}
+
+@page :blank {
+  @bottom-right {
+    content: none;
+  }
+
+  @bottom-left {
+    content: none;
+  }
+}
+
+html {
+  font-size: 12pt;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  line-height: 2;
+  text-align: justify;
+  text-indent: 30px;
+}
+
+img {
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10% 10% 10% 10%;
+}
+
+h1 a {
+  color: inherit;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration-line: inherit;
+}
+
+h2 {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 3em;
+  height: 6cm;
+  justify-content: flex-end;
+  margin: 0;
+  string-set: heading content();
+  text-align: center;
+}
+
+h2::before {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+section {
+  break-after: right;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+}
+
+aside figure {
+  flex: none;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+}
+
+aside img {
+  border: 0.4mm solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+  max-width: 20mm;
+}
+
+#authors {
+  padding-top: 10em;
+  text-align: center;
+}
+
+#authors img {
+  display: block;
+  margin: auto;
+  width: 75%;
+}
+
+#authors p {
+  font-size: 1.3em;
+  margin: 5em 0 1em;
+  text-align: center;
+}
+
+.chapter::before {
+  background: center / cover;
+  border-radius: 0 0 50% 50% / 0 0 15mm 15mm;
+  content: "";
+  display: block;
+  height: 70mm;
+  left: -30mm;
+  position: absolute;
+  top: -20mm;
+  width: 168mm;
+  z-index: -1;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2em;
+}
+
+ul li {
+  border-top: .25pt solid #c1c1c1;
+  margin: .25cm 0;
+  padding-top: .25cm;
+  text-align: center;
+}
+
+ul li a {
+  color: inherit;
+  text-decoration-line: inherit;
+}
+
+.outro {
+  border-radius: 50% 50% 0 0 / 15mm 15mm 0 0;
+  display: block;
+  height: 90mm;
+  left: -30mm;
+  max-width: none;
+  object-fit: cover;
+  position: absolute;
+  top: 120mm;
+  width: 168mm;
+  z-index: -1;
+}
+
+{% for chapter in chapters %}
+{% if 'image' in chapter %}
+#{{ chapter.id }}::before {
+  background-image: url("file://{{ chapter.image }}");
+}
+{% endif %}
+{% endfor %}

@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <section class="fullpage">
+      <h1>
+        <a href="#start">{{ title }}</a>
+      </h1>
+      <img src="file://{{ cover_image }}" />
+    </section>
+    <section id="authors">
+      <p>
+        {{ author_name }}
+        {{ author_contact }}
+      </p>
+    </section>
+    
+    {%- for chapter in chapters %}
+    <section id="{{ chapter.id }}" class="chapter">
+      {%- if loop.index0 == 0 %}
+      <h2 id="start">{{ chapter.name }}</h2>
+      {%- else %}
+      <h2 id="{{ chapter.id }}-h2">{{ chapter.name }}</h2>
+      {%- endif %}
+      {%- if 'mini_image' in chapter %}
+      <aside>
+        <figure>
+          <img src="file://{{ chapter.mini_image }}"/>
+        </figure>
+      </aside>
+      {%- endif %}
+
+      {%- for page in chapter.pages %}
+      {%- if loop.index0 != 0 %}
+      <p style="page-break-before: always;"></p>
+      {%- endif %}
+      <section id="{{ page.name }}">
+        {%- for item in page.contents %}
+        <p>
+          {{ item }}
+        </p>
+        {%- endfor %}
+      {%- if 'choices' in page %}
+        <ul>
+          {%- for choice in page.choices %}
+          <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
+          {%- endfor %}
+          <li class="active"></li>
+        </ul>
+      {%- else %}
+        {%- if 'end' not in chapter %}
+        <ul>
+          <li class="active"><a href="#start">back to the start</a></li>
+          <li class="active"></li>
+        </ul>
+        {%- endif %}
+      {%- endif %}
+      </section>
+      
+      {%- if 'image' in page %}
+      <img class="outro" src="file://{{ page.image }}"/>
+      {%- endif %}
+      <p class="fullpage"></p>
+      {%- endfor %}
+    </section>
+    {%- endfor %}
+  </body>
+</html>
