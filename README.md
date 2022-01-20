@@ -60,7 +60,7 @@ The "title" will be the first page and link to the "start". The "start" page wil
 
 The contents of the page can be either a single string, or a list of paragraphs. 
 
-Each story should have an "img" directory, and contain at least the image "story-cover.jpg" to use as the background of the title page. Other images for the story should also be stored here.
+Each story should have an "img" directory where images for the story should also be stored.
 
 ### NOTE
 

@@ -30,9 +30,6 @@ def main():
     if not story_path.exists():
         print("The requested story does not exist")
         return -1
-    if not Path(story_path, "img", "story-cover.jpg").exists():
-        print("The story doesnt have a cover page image")
-        return -1
     if not Path(story_path, "story.yaml").exists():
         print("The story doesnt have its contents defined")
         return -1
