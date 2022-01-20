@@ -17,55 +17,54 @@
       </p>
     </section>
     
-    {% for chapter in chapters %}
+    {%- for chapter in chapters %}
     <section id="{{ chapter.id }}" class="chapter">
-      {% if loop.index0 == 0 %}
+      {%- if loop.index0 == 0 %}
       <h2 id="start">{{ chapter.name }}</h2>
-      {% else %}
+      {%- else %}
       <h2 id="{{ chapter.id }}-h2">{{ chapter.name }}</h2>
-      {% endif %}
-      {% if 'mini_image' in chapter %}
+      {%- endif %}
+      {%- if 'mini_image' in chapter %}
       <aside>
         <figure>
           <img src="file://{{ chapter.mini_image }}"/>
         </figure>
       </aside>
-      {% endif %}
+      {%- endif %}
 
-      {% for page in chapter.pages %}
-      {% if loop.index0 != 0 %}
+      {%- for page in chapter.pages %}
+      {%- if loop.index0 != 0 %}
       <p style="page-break-before: always;"></p>
-      {% endif %}
+      {%- endif %}
       <section id="{{ page.name }}">
-        {% for item in page.contents %}
+        {%- for item in page.contents %}
         <p>
           {{ item }}
         </p>
-        {% endfor %}
-      {% if page.choices|length > 1 %}
+        {%- endfor %}
+      {%- if page.choices|length > 1 %}
         <ul>
-          {% for choice in page.choices %}
+          {%- for choice in page.choices %}
           <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
-          {% endfor %}
+          {%- endfor %}
           <li class="active"></li>
         </ul>
-      {% else %}
-        {% if 'end' not in chapter %}
+      {%- else %}
+        {%- if 'end' not in chapter %}
         <ul>
           <li class="active"><a href="#start">back to the start</a></li>
           <li class="active"></li>
         </ul>
-        {% endif %}
-      {% endif %}
+        {%- endif %}
+      {%- endif %}
       </section>
       
-      {% if 'image' in page %}
+      {%- if 'image' in page %}
       <img class="outro" src="file://{{ page.image }}"/>
-      {% else %}
+      {%- endif %}
       <p class="fullpage"></p>
-      {% endif %}
-      {% endfor %}
+      {%- endfor %}
     </section>
-    {% endfor %}
+    {%- endfor %}
   </body>
 </html>
