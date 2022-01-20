@@ -1,6 +1,6 @@
 @page {
   margin: 1cm 1cm 1cm 1cm;
-  size: 157mm 210mm;
+  size: 148mm 210mm;
 }
 
 @page full {
@@ -42,7 +42,7 @@ p {
 }
 
 img {
-  max-width: 70%;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -68,7 +68,6 @@ h1 a {
   justify-content: flex-end;
   margin: 0;
   text-align: center;
-  text-shadow: -14px 7px 0 white;
 }
 
 h2::before {
