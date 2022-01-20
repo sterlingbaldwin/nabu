@@ -26,7 +26,7 @@ def main():
     lib_path = Path(args.library)
     story_path = Path(lib_path, args.story)
     if not args.output:
-        output = Path(default_lib_path, default_story, f"{args.story}.pdf")
+        output = Path(args.library, args.story, f"{args.story}.pdf")
     if not story_path.exists():
         print("The requested story does not exist")
         return -1
