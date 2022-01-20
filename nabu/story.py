@@ -21,17 +21,18 @@ class Story():
             story_data = yaml.load(fp, Loader=yaml.SafeLoader)
 
         # replace the image paths with the full path
+        img_path = Path(self.story_path, 'img')
         for chapter in story_data['chapters']:
             if 'image' in chapter:
-                chapter['image'] = Path(self.story_path, chapter['image'])
+                chapter['image'] = Path(img_path, chapter['image'])
             if 'mini_image' in chapter:
-                chapter['mini_image'] = Path(self.story_path, chapter['mini_image'])
+                chapter['mini_image'] = Path(img_path, chapter['mini_image'])
             for page in chapter['pages']:
                 if 'image' in page:
-                    page['image'] = Path(self.story_path, page['image'])
+                    page['image'] = Path(img_path, page['image'])
 
         story_html = story_template.render(
-            cover_image=Path(self.story_path, story_data["cover_image"]),
+            cover_image=Path(img_path, story_data["cover_image"]),
             title=story_data["title"],
             author_name=story_data["author_name"],
             author_contact=story_data["author_contact"],
@@ -53,6 +54,4 @@ class Story():
         h = HTML(string=story_html)
         c = CSS(string=story_css)
         h.write_pdf(outpath, stylesheets=[c])
-
-
 

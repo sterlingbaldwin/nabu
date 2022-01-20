@@ -47,13 +47,13 @@
           {% for choice in page.choices %}
           <li class="active"><a href="#{{ choice.target }}">{{ choice.description }}</a></li>
           {% endfor %}
-          <li class="active"></li>
+          <li class="active"><a href="#">----------------------</a></li>
         </ul>
       {% else %}
         {% if 'end' not in chapter %}
         <ul>
           <li class="active"><a href="#start">back to the start</a></li>
-          <li class="active"></li>
+          <li class="active"><a href="#">----------------------</a></li>
         </ul>
         {% endif %}
       {% endif %}
@@ -61,6 +61,8 @@
       
       {% if 'image' in page %}
       <img class="outro" src="file://{{ page.image }}"/>
+      {% else %}
+      <p class="fullpage"></p>
       {% endif %}
       {% endfor %}
     </section>
