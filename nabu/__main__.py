@@ -22,6 +22,7 @@ def main():
     parser.add_argument(
         '-o', '--output',
         help=f"The path to where the output should be saved, default is {default_lib_path}/{default_story}/<STORY_NAME>.pdf")
+    parser.add_argument('--this-is-new', default=False)
     args = parser.parse_args()
     lib_path = Path(args.library)
     story_path = Path(lib_path, args.story)
